@@ -26,7 +26,7 @@ server.use(session({
 
   // let's persist sessions in the db so sessions don't die on server restarts
   store: new KnexSessionStore({
-    knex: require('../database/connection.js'), // configured instance of knex
+    knex: require('../data/dbConfig.js'), // configured instance of knex
     tablename: 'sessions', // table that will store sessions inside the db, name it anything you want
     sidfieldname: 'sid', // column that will hold the session id, name it anything you want
     createtable: true, // if the table does not exist, it will create it automatically
