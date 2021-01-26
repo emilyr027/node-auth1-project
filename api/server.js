@@ -13,8 +13,8 @@ server.use(helmet());
 server.use(express.json());
 server.use(cors());
 server.use(session({
-  name: "monkey", // the default would be sid, but that would reveal our stack
-  secret: "keep it secret, keep it safe!", // to encrypt/decrypt the cookie
+  name: "Cookie Hunter", // the default would be sid, but that would reveal our stack
+  secret: "let's be safe, kids!", // to encrypt/decrypt the cookie
   cookie: {
     maxAge: 1000 * 60 * 60, // how long is the session valid for, in milliseconds
     secure: false, // used over https only, should be true in production
